@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta authors="Chávez Cruz Nadia, Ibarra Sevilla Alison Ximena, López Tello Belén Guadalupe, Ordaz Jiménez Mayte Paola, Sánchez Melo Aylin.">
+        <title>HYDRA - Hidratación en jóvenes. Calculadora</title>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="estilos_calculadora.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    </head>
+
+    <body>
+
+        <!--
+        Integrantes del equipo:
+            -Chávez Cruz Nadia.
+            -Ibarra Sevilla Alison Ximena.
+            -López Tello Belén Guadalupe.
+            -Sánchez Melo Aylin.
+
+        Proyecto para prototipos: Hydra - Mente hidratada, mente sana.
+
+        Fecha: 01 - febrero - 2026.
+
+        Escuela: Centro de Bachillerato Tecnológico Industrial y de Servicios No. 145.
+
+
+        FECHA DE ACTUALIZACIÓN: 01 - febrero - 2026.
+        Proyecto para prototipos 2026.
+
+        Integrantes del equipo:
+            -Chávez Cruz Nadia.
+            -Ibarra Sevilla Alison Ximena.
+            -López Tello Belén Guadalupe.
+            -Sánchez Melo Aylin.
+
+        Asesores:
+         Técnico: Gerardo Uribe Alegría.
+         Metodológico: Victoria Molina López.
+        -->
+
+        <div id="titulo""><h1>Calculadora de hidratación</h1></div>
+        <hr>
+        <p id="frase">Para calcular tu hidratación ideal contesta las siguientes preguntas:</p>
+        <br><br>
+        <div class="contenedor-padre">
+            <form>
+                <div class="genBi">
+                    <br>
+                    <b>Género Biológico</b>
+                    <br>
+                    <input type="radio" name="bio" id="femenino"/>Femenino  <i class='bx bx-female' ></i>
+                    <br>
+                    <input type="radio" name="bio" id="masculino"/>Masculino   <i class='bx bx-male'></i>  <br><br>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="age">
+                    <br>
+                    <b>Edad</b>
+                    <br>
+                    <input type="number" min="15" max="18" value="15" id="edad" class="edad"> 
+                    <br><br>
+                </div>
+
+                <br>
+                <br>
+                <div class="peso">
+                    <b id="peso">Peso</b>
+                    <br>
+                    <input type="number" min="30" class="pes"> <br><br>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="actFis">
+                    <br>
+                    <div class="niv">  <b>Nivel de actividad física:</b> </div>
+                    <br>
+                    <input type="radio" name="actividad" id="Sedentario"/>Sedentario   <i class='bx bxs-game'></i>
+                    <br>
+                    <input type="radio" name="actividad" id="moderado"/>Moderadamente activo  (10 - 30 min)  <i class='bx bxs-tennis-ball'></i>
+                    <br> 
+                    <input type="radio" name="actividad" id="activo"/>Activo  (30 min - 1 h)    <i class='bx bxs-ball'></i>
+                    <br>
+                    <input type="radio" name="actividad" id="muyactivo"/>Muy activo (más de una hora)   <i class='bx bx-cycling'></i>
+                    <br><br>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="formulario">
+                    <br>
+                    <b>¿Qué tipo de bebidas consumes diariamente?</b>
+                    <br><br>
+                    <div id="chesco" class="chesco">
+                        <br>
+                        <b>Refrescos (600 ml)</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="cocacola">Coca - Cola <br>
+                        <input type="checkbox" name="bebida" id="pepsi">Pepsi <br>
+                        <input type="checkbox" name="bebida" id="fanta">Fanta <br>
+                        <input type="checkbox" name="bebida" id="sprite">Sprite <br>
+                        <input type="checkbox" name="bebida" id="jarritos">Jarritos <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div id="hot" class="hot">
+                        <br>
+                        <b>Bebidas Calientes (250 ml)</b>  <i class='bx bxs-coffee'></i>  <br>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="cafenegro">Café negro   
+                        <input type="checkbox" name="bebida" id="teverde">Té verde <br>
+                        <input type="checkbox" name="bebida" id="chocolatec">Chocolate caliente <br>
+                        <input type="checkbox" name="bebida" id="manzanilla">Infusión de manzanilla <br>
+                        <input type="checkbox" name="bebida" id="capuchino">Capuchino <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="fresh" class="fresh">
+                        <br>
+                        <b>Bebidas refescantes (250 ml)</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="aguanatural">Agua natural <br>
+                        <input type="checkbox" name="bebida" id="jugonaturalnaranja">Jugo de naranja natural <br>
+                        <input type="checkbox" name="bebida" id="limonadacasera">Limonada casera <br>
+                        <input type="checkbox" name="bebida" id="tefrio">Té frío (ice tea) <br>
+                        <input type="checkbox" name="bebida" id="smoothiesfruta">Smoothies de fruta <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="aguaS" class="aguaS">
+                        <br>
+                        <b>Aguas de Sabor</b>
+                        <br>
+                        <input type="checkbox" name="bebida" id="jamaica">Jamaica <br>
+                        <input type="checkbox" name="bebida" id="horchata">Horchata <br>
+                        <input type="checkbox" name="bebida" id="limonconchia">Limón con chía <br>
+                        <input type="checkbox" name="bebida" id="tamarindo">Tamarindo <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="juice" class="juice">
+                        <br>
+                        <b>Jugos</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="naranjanatural">Jugo de naranja natural <br>
+                        <input type="checkbox" name="bebida" id="manzanaembotellado">Jugo de manzana embotellado (comercial) <br>
+                        <input type="checkbox" name="bebida" id="verde">Jugo verde natural <br>
+                        <input type="checkbox" name="bebida" id="uvanatural">Jugo de uva 100% natural <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="cheve" class="cheve">
+                        <br>
+                        <b>Alcohol</b>  <i class='bx bxs-drink'></i>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="cerveza">Cerveza <br>
+                        <input type="checkbox" name="bebida" id="vinotinto">Vino tinto <br>
+                        <input type="checkbox" name="bebida" id="vinoblanco">Vino blanco <br>
+                        <input type="checkbox" name="bebida" id="tequila">Tequila <br>
+                        <input type="checkbox" name="bebida" id="vodka">Vodka <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="melox" class="melox">
+                        <br>
+                        <b>Sueros</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="electrolit">Electrolit <br>
+                        <input type="checkbox" name="bebida" id="pedialyte">Pedialyte <br>
+                        <input type="checkbox" name="bebida" id="sueroviaoral">Suero vía oral <br>
+                        <input type="checkbox" name="bebida" id="sueroxenpolvo">Suerox en polvo <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="fifes" class="fifes">
+                        <br>
+                        <b>Bebidas deportivas</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="gatorade">Gatorade <br>
+                        <input type="checkbox" name="bebida" id="powerade">Powerade <br>
+                        <input type="checkbox" name="bebida" id="electrolitsport">Electrolit sport <br>
+                        <input type="checkbox" name="bebida" id="suerox">Suerox <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="chiwis" class="chiwis">
+                        <br>
+                        <b>Bebidas energéticas</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="monster">Monster Energy <br>
+                        <input type="checkbox" name="bebida" id="redbull">Red Bull <br>
+                        <input type="checkbox" name="bebida" id="voltblue">Vol Blue Energy <br>
+                        <input type="checkbox" name="bebida" id="amper">Amper Energy <br>
+                        <input type="checkbox" name="bebida" id="vive100">Vive 100% Ginseng <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="muu" class="muu">
+                        <br>
+                        <b>Lácteos</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="lecheentera">Leche entera <br>
+                        <input type="checkbox" name="bebida" id="lechedeslac">Leche deslactosada <br>
+                        <input type="checkbox" name="bebida" id="lecheevaporada">Leche evaporada <br>
+                        <input type="checkbox" name="bebida" id="yogurtnatural">Yogurt natural <br>
+                        <input type="checkbox" name="bebida" id="yogurtfrutaosaborizado">Yogurt con fruta o saborizado <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div id="idk" class="idk">
+                        <br>
+                        <b>Bebidas funcionales</b>
+                        <br><br>
+                        <input type="checkbox" name="bebida" id="iso">Bebida Isotónica (Ej: Gatorade, Powerade) <br>
+                        <input type="checkbox" name="bebida" id="coco">Agua De Coco Envasada (Ej: Vita Coco, Zico) <br>
+                        <input type="checkbox" name="bebida" id="energia">Bebida Energética (Ej: Red Bull, Monster)<br>
+                        <input type="checkbox" name="bebida" id="kombucha">Kombucha <br>
+                        <input type="checkbox" name="bebida" id="almendra">Leche De Almendras Fortificada <br>
+                        <input type="checkbox" name="bebida" id="colageno">Bebida De Colágeno Hidrolizado <br>
+                        <input type="checkbox" name="bebida" id="infundidos">Agua Infundida Con Vitaminas <br>
+                        <input type="checkbox" name="bebida" id="jengibre">Bebida De Jengibre Y Cúrcuma <br> (Ej: Vitaminwater, Smartwater) <br>
+                        <input type="checkbox" name="bebida" id="ninguno">Ninguno <br><br>
+                    </div>
+
+                    <br><br>
+
+                </div>
+
+                <br><br>
+                <button type="button" id="calcular" onclick="calcularHidratacion()">Calcular</button>
+                <button type="reset">Cancelar</button>
+
+            </form>
+        </div>
+        <br><br>
+        <p id="r">RESULTADOS</p>
+        <br>
+        <div id="resultados"> </div>
+
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+              AOS.init();
+        </script>
+
+    </body>
+
+</html>
